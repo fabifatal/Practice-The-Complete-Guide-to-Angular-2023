@@ -1,10 +1,11 @@
-<app-header></app-header>
+<app-header
+(option)="onOption($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-12">
       <div class="h1">I´m Working!</div>
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+        <app-recipes *ngIf="chooseRecipe"></app-recipes>
+        <app-shopping-list *ngIf="chooseShoppingList"></app-shopping-list>
     </div>
   </div>
 </div>
